@@ -217,7 +217,7 @@
             mainMenu?.classList.remove('main-nav--active');
             expanded = navToggle?.getAttribute('aria-expanded');
         }
-    })
+    });
 
     navItems.forEach( item => {
         item.addEventListener('click', () => {
@@ -225,7 +225,7 @@
             mainMenu?.classList.remove('main-nav--active');
             expanded = navToggle?.getAttribute('aria-expanded');
         })
-    })
+    });
 
     window.onscroll = () => {
         if(scrollY > 20) {
