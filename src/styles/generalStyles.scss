@@ -1,0 +1,188 @@
+@font-face {
+    font-family: manrope;
+    src: url('../fonts/Manrope-VariableFont_wght.ttf');
+}
+
+:root {
+    // Primary Colors
+    --color-primary-100: #346AB2;
+    --color-primary-200: #1F5193;
+    --color-primary-300: #103970;
+    --color-primary-400: #062247;
+    --color-primary-500: #01132B;
+    --color-primary-600: #000B1A;
+
+    // Secondary Colors
+    --color-secondary-100: #ADEBD4;
+    --color-secondary-200: #81E4BF;
+    --color-secondary-300: #4DE5AC;
+    --color-secondary-400: #1AE599;
+    --color-secondary-500: #01DA89;
+    --color-secondary-600: #009960;
+
+    // Neutral Colors
+    --color-neutral-100: #F5F5F5;
+    --color-neutral-200: #D5D5D5;
+    --color-neutral-300: #B2B1B1;
+    --color-neutral-400: #626262;
+    --color-neutral-500: #1D1D1D;
+    --color-neutral-600: #0D0D0D;
+
+    // Feedback Colors
+    --color-error-100: #FF0000;
+    --color-error-200: #CC0000;
+    --color-error-300: #990000;
+
+    --color-success-100: #01CB80;
+    --color-success-200: #009960;
+    --color-success-300: #006640;
+
+    --color-warning-100: #FFD633;
+    --color-warning-200: #FFCC00;
+    --color-warning-300: #CCA300;
+
+    --color-info-100: #3399FF;
+    --color-info-200: #0066CC;
+    --color-info-300: #004C99;
+
+    --font-size-xs: clamp(0.625rem, 0.839rem + 0.179vw, 0.75rem);
+    --font-size-sm: clamp(0.75rem, 0.839rem + 0.179vw, 0.875rem);
+    --font-size-base: clamp(0.875rem, 0.839rem + 0.179vw, 1rem);
+    --font-size-lg: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+    --font-size-xl: clamp(1.125rem, 1.089rem + 0.179vw, 1.25rem);
+    --font-size-2xl: clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem);
+    --font-size-3xl: clamp(1.5rem, 1.357rem + 0.714vw, 2rem);
+    --font-size-4xl: clamp(1.75rem, 1.464rem + 1.429vw, 2.75rem);
+    --font-size-5xl: clamp(2rem, 1.571rem + 2.143vw, 3.5rem);
+}
+
+.text-xs {
+    font-size: var(--font-size-xs);
+    line-height: calc(1 / 0.75);
+}
+
+.text-sm {
+    font-size: var(--font-size-sm);
+    line-height: calc(1 / 0.875);
+}
+
+.text-base {
+    font-size: var(--font-size-base);
+    line-height: calc(1.5 / 1);
+}
+
+.text-lg {
+    font-size: var(--font-size-lg);
+    line-height: calc(1.75 / 1.125);
+}
+
+.text-xl {
+    font-size: var(--font-size-xl);
+    line-height: calc(1.75 / 1.25);
+}
+
+.text-2xl {
+    font-size: var(--font-size-2xl);
+    line-height: calc(2 / 1.5);
+}
+
+.text-3xl {
+    font-size: var(--font-size-3xl);
+    line-height: calc(2.25 / 1.875);
+}
+
+.text-4xl {
+    font-size: var(--font-size-4xl);
+    line-height: calc(2.5 / 2.25);
+}
+
+.text-5xl {
+    font-size: var(--font-size-5xl);
+    line-height: calc(1 / 1);
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem)/2) clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem);
+    border-radius: 0.75rem;
+    transition: background-color all ease-in-out 0.3s;
+}
+
+.btn-sq {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem)/2) calc(clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem)/2);
+    border-radius: 0.75rem;
+    transition: background-color all ease-in-out 0.3s;
+}
+
+.btn-primary {
+    color: var(--color-primary-500);
+    background-color: var(--color-secondary-500);
+    transition: background-color all ease-in-out 0.3s;
+}
+
+.btn-primary:hover {
+    color: var(--color-primary-400);
+    background-color: var(--color-secondary-400);
+}
+
+.btn-primary:active {
+    color: var(--color-primary-600);
+    background-color: var(--color-secondary-600);
+}
+
+.btn-secondary {
+    color: var(--color-secondary-500);
+    border: solid 1px var(--color-secondary-500);
+    transition: background-color all ease-in-out 0.3s;
+}
+
+.btn:disabled {
+    background-color: var(--color-neutral-300);
+    border: solid 2px var(--color-neutral-300);
+    color: var(--color-neutral-600);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-secondary:hover {
+    color: var(--color-secondary-400);
+    border: solid 1px var(--color-secondary-400);
+}
+
+.btn-secondary:active {
+    color: var(--color-secondary-600);
+    border: solid 1px var(--color-secondary-600);
+}

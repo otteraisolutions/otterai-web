@@ -1,0 +1,238 @@
+<header class="header-container" id="header">
+
+    <!-- nav logo -->
+    <a href="#home">
+        <figure class="header__figure">
+            <img loading="eager" fetchpriority="high" src="./images/otter-logo.svg" alt="Logo otter ai solutions" class="header__logo">
+        </figure>
+    </a>
+
+    <!-- nav options -->
+    <nav 
+        class="main-nav"
+        id="main-menu"
+        role="navigation"
+        aria-label="Main navigation">
+        <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="#home" class="main-nav__link text-xl font-semibold">Inicio</a></li>
+            <li class="main-nav__item"><a href="#services" class="main-nav__link text-xl font-semibold">Servicios</a></li>
+            <li class="main-nav__item"><a href="#about" class="main-nav__link text-xl font-semibold">Sobre Nosotros</a></li>
+            <li class="main-nav__item"><a href="#contact" class="main-nav__link text-xl font-semibold">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- button for mobile -->
+		<button
+			class="nav__toggle"
+			aria-controls="nav-menu"
+			aria-expanded="false"
+			aria-label="Open navigation"
+		>
+			<svg class="toggle-btn__hamburger" viewBox="0 0 100 100">
+				<rect
+					class="hamburger__line top"
+					width="80"
+					height="10"
+					x="10"
+					y="25"
+					rx="5"></rect>
+				<rect
+					class="hamburger__line middle"
+					width="80"
+					height="10"
+					x="10"
+					y="45"
+					rx="5"></rect>
+				<rect
+					class="hamburger__line bottom"
+					width="80"
+					height="10"
+					x="10"
+					y="65"
+					rx="5"></rect>
+			</svg>
+		</button>
+</header>
+
+<style>
+
+    /*================ base styles header ==================*/
+
+    .header-container {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-height: 3.5rem;
+        padding: 0.5rem clamp(1rem, -0.429rem + 7.143vw, 6rem);
+        background-color: var(--color-primary-600);
+        transition: all ease-in-out 0.2s;
+        z-index: 1;
+    }
+
+    .header__logo{
+        width: 7rem;
+        height: 2.5rem;
+    }
+
+    .header-container--active {
+        box-shadow: rgba(1, 218, 137, 0.2) 0px 2px 8px 0px;
+    }
+
+    /* ================= Navigation styles ================== */
+
+    .main-nav {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 3rem;
+        left: 0;
+        width: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        background-color: var(--color-primary-600);
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .main-nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        gap: 1em;
+        padding: 1em 0;
+    }
+
+    .main-nav__link {
+            transition: all 0.2s ease-in-out;
+        }
+
+    .main-nav__link:hover {
+        color: var(--color-secondary-500);
+    }
+
+    .main-nav--active {
+        transform: scaleY(1);
+        box-shadow: rgba(1, 218, 137, 0.1) 0px 6px 8px 0px;
+    }
+
+    /* ============= Toggle button ===================== */
+
+    .nav__toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+    }
+
+    .toggle-btn__hamburger {
+        fill: var(--color-neutral-100);
+    }
+
+    .nav__toggle[aria-expanded="false"] .hamburger__line {
+        transition:
+        y 0.3s ease-in-out 0.3s,
+        rotate 0.2s linear,
+        opacity 0s 0.2s;
+        transform-origin: center;
+    }
+
+    .nav__toggle[aria-expanded="true"] .hamburger__line {
+        transition:
+        y 0.3s ease-in-out,
+        rotate 0.2s linear 0.3s,
+        opacity 0s 0.3s;
+        transform-origin: center;
+    }
+
+    .nav__toggle[aria-expanded="true"] :is(.top, .bottom) {
+        y: 45;
+    }
+
+    .nav__toggle[aria-expanded="true"] .top {
+        rotate: 45deg;
+    }
+
+    .nav__toggle[aria-expanded="true"] .bottom {
+        rotate: -45deg;
+    }
+
+    .nav__toggle[aria-expanded="true"] .middle {
+        opacity: 0;
+    }
+
+     /* ############ queries break points ##################### */
+
+    @media (min-width: 64rem) {
+        
+        .nav__toggle {
+            display: none;
+        }
+
+        .main-nav {
+            position: static;
+            flex-direction: row;
+            background-color: transparent;
+            transform: scaleY(1);
+            height: auto;
+            width: auto;
+            overflow: visible;
+        }
+
+        .main-nav__list {
+            flex-direction: row;
+            gap: 2rem;
+            padding: 0;
+        }
+
+}
+</style>
+
+<script>
+    const header = document.getElementById('header');
+    const navToggle = document.querySelector('.nav__toggle');
+    const mainMenu = document.getElementById('main-menu');
+    const navItems = document.querySelectorAll('.main-nav__item');
+    let expanded = navToggle?.getAttribute('aria-expanded');
+
+    // Toggle navigation menu on mobile
+    navToggle?.addEventListener('click' , () => {
+
+        if (expanded === 'false') {
+            navToggle.setAttribute('aria-expanded', 'true');
+            mainMenu?.classList.add('main-nav--active');
+            expanded = navToggle?.getAttribute('aria-expanded');;
+        } else {
+            navToggle.setAttribute('aria-expanded', 'false');
+            mainMenu?.classList.remove('main-nav--active');
+            expanded = navToggle?.getAttribute('aria-expanded');
+        }
+    })
+
+    navItems.forEach( item => {
+        item.addEventListener('click', () => {
+            navToggle?.setAttribute('aria-expanded', 'false');
+            mainMenu?.classList.remove('main-nav--active');
+            expanded = navToggle?.getAttribute('aria-expanded');
+        })
+    })
+
+    window.onscroll = () => {
+        if(scrollY > 20) {
+            header?.classList.add('header-container--active');
+        }
+        if(scrollY < 20) {
+            header?.classList.remove('header-container--active');
+        }
+    }
+</script>

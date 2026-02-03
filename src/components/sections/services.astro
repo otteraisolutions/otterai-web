@@ -1,0 +1,155 @@
+<section class="services-section" id="services">
+    <div class="services-section__content">
+        <h2 class="services-section__title text-4xl font-bold">
+            Nuestros Servicios
+        </h2>
+        <p class="services-section__caption text-lg font-normal">
+            Descubre cómo Otter AI Solutions puede transformar tu negocio con nuestras soluciones personalizadas de análisis de datos e inteligencia artificial.
+        </p>
+        <div class="card-wrapper">
+            <article class="card">
+                <figure class="card__figure">
+                    <img loading="lazy" src="./icons/slider-icon.svg" alt="Icono automatización" class="card__img">
+                </figure>
+                <div class="card__body">
+                    <h3 class="card__title text-2xl font-bold">Automatización Inteligente</h3>
+                    <p class="card__description text-base font-normal">
+                        Diseñamos agentes inteligentes que entienden, conversan y ejecutan tareas, optimizando procesos y mejorando la experiencia de clientes y equipos internos.
+                    </p>
+                </div>
+                <footer class="card__footer">
+                    <a href="#contact" class="card__link btn btn-primary text-lg font-semibold">
+                        Más Información
+                    </a>
+                </footer>
+            </article>
+
+            <article class="card">
+                <figure class="card__figure">
+                    <img loading="lazy" src="./icons/analytics-icon.svg" alt="Icono gráficas" class="card__img">
+                </figure>
+                <div class="card__body">
+                    <h3 class="card__title text-2xl font-bold">Análisis Avanzado & Predicción de Negocio</h3>
+                    <p class="card__description text-base font-normal">
+                        Convertimos los datos en decisiones estratégicas mediante modelos predictivos y analítica avanzada que anticipan comportamientos y optimizan resultados.
+                    </p>
+                </div>
+                <footer class="card__footer">
+                    <a href="#contact" class="card__link btn btn-primary text-lg font-semibold">
+                        Más Información
+                    </a>
+                </footer>
+            </article>
+
+            <article class="card">
+                <figure class="card__figure">
+                    <img loading="lazy" src="./icons/show-icon.svg" alt="Icono visión artificial" class="card__img">
+                </figure>
+                <div class="card__body">
+                    <h3 class="card__title text-2xl font-bold">Visión Artificial & Análisis de Imágenes</h3>
+                    <p class="card__description text-base font-normal">
+                        Implementamos soluciones de visión artificial para interpretar imágenes y video, automatizando tareas visuales y mejorando el control y la eficiencia operativa.
+                    </p>
+                </div>
+                <footer class="card__footer">
+                    <a href="#contact" class="card__link btn btn-primary text-lg font-semibold">
+                        Más Información
+                    </a>
+                </footer>
+            </article>
+
+            <article class="card">
+                <figure class="card__figure">
+                    <img loading="lazy" src="./icons/audit-icon.svg" alt="Icono consultoría" class="card__img">
+                </figure>
+                <div class="card__body">
+                    <h3 class="card__title text-2xl font-bold">Consultoría, Cloud & Escalabilidad en IA</h3>
+                    <p class="card__description text-base font-normal">
+                        Acompañamos a las organizaciones en la adopción estratégica de la inteligencia artificial, asegurando escalabilidad, seguridad y retorno de inversión.
+                    </p>
+                </div>
+                <footer class="card__footer">
+                    <a href="#contact" class="card__link btn btn-primary text-lg font-semibold">
+                        Más Información
+                    </a>
+                </footer>
+            </article>
+
+        </div>
+</section>
+<style>
+    .services-section {
+        scroll-margin-top: 4rem;
+        padding: 0 clamp(1rem, -0.429rem + 7.143vw, 6rem);
+    }
+
+    .services-section__title {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .services-section__caption {
+        margin-bottom: 2rem;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .card-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 18rem;
+        max-width: 22rem;
+        min-height: 25rem;
+        padding: 1rem;
+        background-color: var(--color-primary-500);
+        border-radius: 0.75rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card__figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        padding: 1rem;
+        background-color: var(--color-secondary-500);
+        border-radius: 0.75rem;
+    }
+
+    .card__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card__body {
+        margin-top: 2rem;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    .card__title {
+        margin-bottom: 1rem;
+        hyphens: none;
+        text-wrap: balance;
+    }
+
+    .card__description {
+        color: var(--color-neutral-300);
+    }
+
+    .card:hover {
+        box-shadow: rgba(1, 218, 137, 0.4) 0px 2px 8px 2px;
+        transform: translateY(-5px);
+    }
+</style>

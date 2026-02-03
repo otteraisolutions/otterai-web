@@ -1,0 +1,48 @@
+---
+// general styles
+import '../styles/reset.scss';
+import '../styles/generalStyles.scss';
+
+// components
+import NavBar from '../components/elements/navBar.astro'
+import Footer from '../components/elements/footer.astro';
+---
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="OtterAI Solutions"/>
+		<meta property="og:description" content="Empresa especializada en inteligencia artificial: agentes inteligentes, automatización, machine learning, visión artificial, analítica avanzada y soluciones en la nube. Acompañamos a las organizaciones en la adopción estratégica de la IA."/>
+		<meta property="og:image" content="./favicon.svg"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="https://otteraisolutions.co/">
+		<!-- SEO Meta Tags -->
+		<meta name="robots" content="index, follow"/>
+		<meta name="description" content="Empresa especializada en inteligencia artificial: agentes inteligentes, automatización, machine learning, visión artificial, analítica avanzada y soluciones en la nube. Acompañamos a las organizaciones en la adopción estratégica de la IA."/>
+		<meta name="keywords" content="Inteligencia Artificial, Agentes Inteligentes, Automatización, Machine Learning, Visión Artificial, Analítica Avanzada, Soluciones en la Nube, Transformación Digital, Otter AI Solutions"/>
+		<meta name="author" content="OtterAI Solutions"/>
+		<!-- Links -->
+		<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+		<link rel="preload" href="./images/home-img.svg" as="image" fetchpriority="high">
+		<link rel="canonical" href="https://www.otteraisolutions.co/">
+
+		<title>OtterAI Solutions</title>
+	</head>
+	<body>
+		<NavBar />
+		<main>
+			<slot />
+		</main>
+		<Footer/>
+	</body>
+</html>
+
+<style>
+	main {
+		position: relative;
+        top: 0;
+        left: 0;
+	}
+</style>

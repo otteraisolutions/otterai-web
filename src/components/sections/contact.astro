@@ -1,0 +1,104 @@
+---
+import ContactForm from '../elements/contactForm.astro';
+---
+<section class="contact-section" id="contact">
+    <h2 class="contact-section__title text-4xl font-bold">
+        Contacto
+    </h2>
+    <div class="contact-section__content">
+        <div class="contact__info">
+            <h3 class="contact-section__subtitle text-2xl font-bold">
+                ¿Listo para transformar tu negocio con Otter AI Solutions?
+            </h3>
+            <p class="contact-section__caption text-lg font-normal">
+                ¡Ponte en contacto con nosotros hoy mismo y descubre cómo podemos ayudarte a transformar tu empresa!
+            </p>
+            <div class="contact-section__links">
+                <a target="_blank" href="https://wa.me/+573122780095" class="home-section__cta btn-sq btn-primary text-lg font-semibold">
+                    <img src="./icons/whatsapp.svg" alt="WhatsApp Icon">
+                </a>
+                <a href="mailto:otteraisolutions@otteraisolutions.co" class="home-section__cta btn-sq btn-primary text-lg font-semibold">
+                    <img src="./icons/mail.svg" alt="Mail Icon">
+                </a>
+            </div>
+        </div>
+        <div class="contact-section__form">
+            <ContactForm/>
+        </div>
+    </div>
+</section>
+<style>
+    .contact-section {
+        scroll-margin-top: 4rem;
+        padding: 0 clamp(1rem, -0.429rem + 7.143vw, 6rem);
+        margin-bottom: 2rem;
+    }
+
+    .contact-section__title {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .contact-section__content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+        border-radius: 0.75rem;
+    }
+
+    .contact-section__subtitle {
+        text-align: center;
+        hyphens: none;
+        text-wrap: balance;
+    }
+
+    .contact-section__caption {
+        margin-top: 1rem;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .contact-section__links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    .contact-section__form {
+        padding: 1rem;
+        border-radius: 0.75rem;
+        min-width: 100%;
+        background-color: var(--color-primary-500);
+    }
+
+    @media (min-width: 64rem) {
+        .contact-section__content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .contact-section__links {
+            justify-content: left;
+        }
+
+        .contact-section__info, .contact-section__form {
+            min-width: 40%;
+        }
+
+        .contact-section__subtitle {
+            text-align: left;
+        }
+
+        .contact-section__caption {
+            text-align: left;
+        }
+
+        .contact-section__links {
+            justify-content: flex-start;
+        }
+    }
+</style>
