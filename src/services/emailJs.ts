@@ -5,7 +5,7 @@ emailJs.init(publicKey);
 
 console.log("[EmailJS] cliente cargado");
 
-const form = document.getElementById('contact-form');
+const form = document.getElementById('contact-form') as HTMLFormElement | null;
 
 if (form) {
 
