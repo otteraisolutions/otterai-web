@@ -3,7 +3,9 @@ const publicKey = import.meta.env.PUBLIC_KEY_CONTACT_FORM
 
 emailJs.init(publicKey);
 
-const form = document.getElementById('contact-form') as HTMLFormElement;
+console.log("[EmailJS] cliente cargado");
+
+const form = document.getElementById('contact-form');
 
 if (form) {
 
