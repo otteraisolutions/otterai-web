@@ -3,8 +3,6 @@ const publicKey = import.meta.env.PUBLIC_KEY_CONTACT_FORM
 
 emailJs.init(publicKey);
 
-console.log('[EmailJS] script cargado');
-
 const form = document.getElementById('contact-form') as HTMLFormElement;
 
 if (form) {
@@ -28,13 +26,15 @@ if (form) {
         emailJs.send('Contact_Web_Service', 'template_oxkq6sd', templateParams)
         .then(
             (response) => {
-                console.log(response);
+                if (response.status === 200) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    form.reset();
+                }
             }
         )
         .catch (
             (error) => {
-                console.log(error);
-                console.log('object');
+                console.log('FAILED...', error);
             }
         )
 
