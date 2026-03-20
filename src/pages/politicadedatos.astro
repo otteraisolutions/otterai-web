@@ -1,0 +1,144 @@
+---
+import TermsLayout from "../layouts/TermsLayout.astro";
+---
+
+<TermsLayout>
+	<div class="header">
+        <figure class="header__figure">
+            <img loading="eager" fetchpriority="high" src="./images/otter-logo.svg" alt="Logo agente virtual predios" class="header__logo">
+        </figure>
+        <figure class="header__figure">
+            <img loading="eager" fetchpriority="high" src="./images/predios_logo.svg" alt="Logo agente virtual predios" class="header__logo">
+        </figure>
+
+	</div>
+	<section class="terms">
+		<h1 class="text-4xl font-bold">Política de Datos</h1>
+		<h2 class="text-lg font-bold">Mensaje</h2>
+		<p class="text-base">
+			Esta aplicación recoge información en la base de datos o archivos que son
+			de dominio de la misma, estos respetan la privacidad y cumplen con lo
+			normado en la ley 1581 de 2012, el Decreto Nacional 1377 de 2013,
+			reglamentada parcialmente por el Decreto 1081 de 2015, adicional a ello en
+			concordancia con la sentencia C-748 de 2011 y el Decreto 255 de 2022,
+			conpes 4144 de 2025-AI, mediante la aceptación y continuidad en la
+			aplicación acepta los términos y usos internos como titular de la misma,
+			incluyendo los denominados en la categoría especiales de datos.
+		</p>
+		<h2 class="text-lg font-bold">
+			Información sobre la Recopilación y Uso de Datos
+		</h2>
+		<div class="content">
+			<p class="text-base">
+				En cumplimiento de la ley 1581 de 2012, el Decreto Nacional 1377 de
+				2013, reglamentada parcialmente por el Decreto 1081 de 2015, adicional a
+				ello en concordancia con la sentencia C-748 de 2011 y el Decreto 255 de
+				2022, como encargado y responsable del tratamiento, los datos captados
+				de usuario serán para uso estadístico, alimento de la base de datos,
+				mejora de la aplicación y no se revelará la información del usuario
+				final a ninguna entidad o persona natural excepto si media solicitud
+				judicial en cumplimiento de los parámetros legales, es por ello que los
+				datos personales registrados en nuestra base de datos cumple con el
+				tratamiento establecido en la normativa legal colombiana vigente, en
+				respeto de la categoría especiales de datos.
+			</p>
+			<p class="text-base">
+				Las consultas y reclamos del uso de la información aceptada al ingreso
+				de la aplicación serán conforme a la normativa vigente, respetando los
+				días hábiles establecidos normativamente, y por la SuperSociedades de
+				Industria y Comercio.
+			</p>
+			<p class="text-base">
+				Lo anterior sin perjuicio del Registro Nacional de Base de Datos
+				estipulado en el decreto nacional 886 de 2014 de ser necesario.
+			</p>
+			<p class="text-base">
+				Si en algún momento usted como titular de la información que reposa en
+				esta base de datos puede ejercer sus derechos a conocer, actualizar,
+				rectificar y suprimir el dato y/o revocar la autorización, podrá
+				escribirnos al correo <a
+					href="mailto:otteraisolutions@otteraisolutions.co"
+					class="font-medium">otteraisolutions@otteraisolutions.co</a
+				>
+			</p>
+			<p class="text-base">
+				Finalmente, se informa que la entrada en vigencia del tratamiento de
+				datos que se acepta, es desde el momento de la aceptación por el
+				transcurso de un año.
+			</p>
+		</div>
+	</section>
+	<footer>
+        <div class="footer__container">
+            <figure class="footer__figure">
+                <img loading="eager" fetchpriority="high" src="./images/otter-logo.svg" alt="Logo agente virtual predios" class="header__logo">
+            </figure>
+            <div class="contact__info">
+                <p class="contact__item text-sm">Correo: <a href="mailto:otteraisolutions@otteraisolutions.co" class="font-medium">otteraisolutions@otteraisolutions.co</a></p>
+                <p class="contact__item text-sm">Teléfono: <a href="tel:+573001234567" class="font-medium">+57 312 278 00 95</a></p>
+                <!-- <p class="contact__item text-sm">Dirección: Calle Falsa 123, Ciudad, País</p> -->
+            </div>
+        </div>
+		<p class="copy text-sm">
+			© 2026 OtterAI Solutions. Todos los derechos reservados.
+		</p>
+	</footer>
+</TermsLayout>
+
+<style>
+	.terms {
+		max-width: 50rem;
+		margin: 0 auto;
+		padding: 0.5rem clamp(1rem, -0.429rem + 7.143vw, 2rem);
+	}
+	h1 {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	h2 {
+		margin-top: 1.5rem;
+		margin-bottom: 1rem;
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        align-items: flex-end;
+        max-width: 50rem;
+        max-height: 8rem;
+        margin: 0 auto;
+        padding: 0.5rem clamp(1rem, -0.429rem + 7.143vw, 2rem);
+    }
+
+    .header__logo{
+        height: 6rem;
+    }
+
+    footer {
+        min-width: 100%;
+        padding:  0.5rem clamp(1rem, -0.429rem + 7.143vw, 2rem);
+        text-align: center;
+    }
+
+    .footer__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 50rem;
+        margin: 0 auto;
+        padding: 0.5rem clamp(1rem, -0.429rem + 7.143vw, 2rem);
+    }
+
+    .contact__info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+</style>

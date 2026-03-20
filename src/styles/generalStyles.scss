@@ -129,6 +129,10 @@
     font-weight: 900;
 }
 
+.color-accent {
+    color: var(--color-secondary-500);
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
